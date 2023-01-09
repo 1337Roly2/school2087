@@ -29,13 +29,45 @@ def get_text_messages(message):
         back = types.KeyboardButton('↩️ Вернуться назад')
         btn1 = types.KeyboardButton('📝 Перейти к заданиям')
         markup.add(back, btn1)
-        
         markup2 = types.InlineKeyboardMarkup(row_width=1)
         url_button1 = types.InlineKeyboardButton(text="📺 Видео разбор", url="https://youtu.be/Qc_bor8hnCQ")
         markup2.add(url_button1)
-        
         bot.send_message(message.chat.id, 'Задание №1.' + '\n' + '\n' + 'Сколько будет 1+1?',  reply_markup=markup) #ответ бота
         bot.send_message(message.chat.id,  f'Ответ: ||2||', parse_mode='MarkdownV2',  reply_markup=markup2) #ответ бота
+    
+    elif message.text == 'Задание №2':
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
+        back = types.KeyboardButton('↩️ Вернуться назад')
+        btn1 = types.KeyboardButton('📝 Перейти к заданиям')
+        markup.add(back, btn1)
+        markup2 = types.InlineKeyboardMarkup(row_width=1)
+        url_button1 = types.InlineKeyboardButton(text="📺 Видео разбор", url="https://youtu.be/Qc_bor8hnCQ")
+        markup2.add(url_button1)
+        bot.send_message(message.chat.id, 'Задание №1.' + '\n' + '\n' + 'Сколько будет 2+2?',  reply_markup=markup) #ответ бота
+        bot.send_message(message.chat.id,  f'Ответ: ||4||', parse_mode='MarkdownV2',  reply_markup=markup2) #ответ бота
+    
+    elif message.text == 'Задание №3':
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
+        back = types.KeyboardButton('↩️ Вернуться назад')
+        btn1 = types.KeyboardButton('📝 Перейти к заданиям')
+        markup.add(back, btn1)
+        markup2 = types.InlineKeyboardMarkup(row_width=1)
+        url_button1 = types.InlineKeyboardButton(text="📺 Видео разбор", url="https://youtu.be/Qc_bor8hnCQ")
+        markup2.add(url_button1)
+        bot.send_message(message.chat.id, 'Задание №1.' + '\n' + '\n' + 'Сколько будет 3+3?',  reply_markup=markup) #ответ бота
+        bot.send_message(message.chat.id,  f'Ответ: ||26||', parse_mode='MarkdownV2',  reply_markup=markup2) #ответ бота
+    
+    
+    elif message.text == 'Задание №4':
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
+        back = types.KeyboardButton('↩️ Вернуться назад')
+        btn1 = types.KeyboardButton('📝 Перейти к заданиям')
+        markup.add(back, btn1)
+        markup2 = types.InlineKeyboardMarkup(row_width=1)
+        url_button1 = types.InlineKeyboardButton(text="📺 Видео разбор", url="https://youtu.be/Qc_bor8hnCQ")
+        markup2.add(url_button1)
+        bot.send_message(message.chat.id, 'Задание №1.' + '\n' + '\n' + 'Сколько будет 4+4?',  reply_markup=markup) #ответ бота
+        bot.send_message(message.chat.id,  f'Ответ: ||8||', parse_mode='MarkdownV2',  reply_markup=markup2) #ответ бота
         
     elif message.text == '↩️ Вернуться назад':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
