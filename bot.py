@@ -27,7 +27,7 @@ def get_text_messages(message):
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardMarkup("Сайт школы", url="https://sch2087uv.mskobr.ru/"))
         markup.add(types.InlineKeyboardMarkup("Вконтакте", url="https://vk.com/sch2087"))
-        bot.send_message(message.from_user.id, 'Наши ресурсы:', reply_markup=markup)
+        bot.send_message(message.chat.id, 'Наши ресурсы:', reply_markup=markup)
 
     elif message.text == 'Вконтакте школы':
         bot.send_message(message.from_user.id, 'Перейдите по ' + '[ссылке](https://vk.com/sch2087)', parse_mode='Markdown')
