@@ -34,8 +34,8 @@ def get_text_messages(message):
         url_button1 = types.InlineKeyboardButton(text="📺 Видео разбор", url="https://youtu.be/Qc_bor8hnCQ")
         markup2.add(url_button1)
         
-        bot.send_message(message.chat.id, 'Задание №1.' + '\n' + 'Сколько будет 1+1?',  reply_markup=markup2) #ответ бота
-        bot.send_message(message.chat.id,  f'Ответ: ||2||', parse_mode='MarkdownV2',  reply_markup=markup) #ответ бота
+        bot.send_message(message.chat.id, 'Задание №1.' + '\n' + 'Сколько будет 1+1?',  reply_markup=markup) #ответ бота
+        bot.send_message(message.chat.id,  f'Ответ: ||2||', parse_mode='MarkdownV2',  reply_markup=markup2) #ответ бота
         
     elif message.text == '↩️ Вернуться назад':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
