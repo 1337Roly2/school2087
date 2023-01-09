@@ -38,7 +38,7 @@ def get_text_messages(message):
         btn1 = types.KeyboardButton('📝 Перейти к заданиям')
         btn2 = types.KeyboardButton('📺 Видео разбор')
         markup.add(back, btn1, btn2)
-        bot.send_message(message.chat.id, f"Видно  ||Не видно||", parse_mode='MarkdownV2', reply_markup=markup) #ответ бота
+        bot.send_message(message.chat.id, f"Видно\||Не видно||", parse_mode='MarkdownV2', reply_markup=markup) #ответ бота
         
     elif message.text == '↩️ Вернуться назад':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
