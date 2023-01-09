@@ -29,6 +29,7 @@ def get_text_messages(message):
         back = types.KeyboardButton('↩️ Вернуться назад')
         btn1 = types.KeyboardButton('📝 Перейти к заданиям')
         btn2 = types.KeyboardButton('📺 Видео разбор')
+        markup.add(back, btn1, btn2)
         bot.send_message(message.chat.id, 'Задание №1.' + '\n' + '\n' + 'Сколько будет 2+2?' + '\n' + '\n' + 'Ответ: ||4||',  reply_markup=markup) #ответ бота
         
     elif message.text == '↩️ Вернуться назад':
