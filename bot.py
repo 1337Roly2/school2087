@@ -11,15 +11,6 @@ def start(message):
     markup.add(btn1)
     bot.send_message(message.from_user.id, "👋 Привет! Я твой бот-помошник! 222", reply_markup=markup)
 
-
-@bot.message_handler(commands=['start2'])
-def start(message):
-
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn1 = types.KeyboardButton("👋 Поздороваться")
-    markup.add(btn1)
-    bot.send_message(message.from_user.id, "👋 Привет! Я твой бот-помошник!", reply_markup=markup)
-
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
 
@@ -42,7 +33,7 @@ def get_text_messages(message):
         bot.send_message(message.from_user.id, 'Перейдите по ' + '[ссылке](https://sites.google.com/mko2087.org/students/daijest)', parse_mode='Markdown')
 
     elif message.text == 'Тест картинки':
-        photo=open('pics\logo1.png', 'rb')
+        photo=open('logo1.png', 'rb')
         bot.send_photo(message.chat.id, photo)
 
 
