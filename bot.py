@@ -25,9 +25,9 @@ def get_text_messages(message):
 
     elif message.text == 'Наши ресурсы':
         markup = types.InlineKeyboardMarkup()
-        btn1 = types.KeyboardButton("Сайт школы", url="https://sch2087uv.mskobr.ru/")
-        btn2 = types.KeyboardButton("Вконтакте", url="https://vk.com/sch2087")
-        markup.add(btn1, btn2)
+        url_button1 = types.InlineKeyboardButton(text="Сайт школы", url="https://sch2087uv.mskobr.ru/")
+        url_button2 = types.InlineKeyboardButton(text="Вконтакте", url="https://vk.com/sch2087")
+        markup.add(url_button1, url_button2)
         bot.send_message(message.chat.id, 'Наши ресурсы:', reply_markup=markup)
 
     elif message.text == 'Вконтакте школы':
