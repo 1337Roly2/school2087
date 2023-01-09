@@ -25,7 +25,7 @@ def get_text_messages(message):
         bot.send_message(message.from_user.id, '📍 Выберите задание:', reply_markup=markup) #ответ бота
 
     elif message.text == '🌐 Наши ресурсы':
-        markup = types.InlineKeyboardMarkup(resize_keyboard=True)
+        markup = types.InlineKeyboardMarkup(row_width=1)
         url_button1 = types.InlineKeyboardButton(text="Сайт школы", url="https://sch2087uv.mskobr.ru/")
         url_button2 = types.InlineKeyboardButton(text="Вконтакте", url="https://vk.com/sch2087")
         url_button3 = types.InlineKeyboardButton(text="Ученический кабинет", url="https://sites.google.com/mko2087.org/students")
