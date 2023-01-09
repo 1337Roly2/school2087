@@ -24,6 +24,14 @@ def get_text_messages(message):
         markup.add(back, btn1, btn2, btn3, btn4)
         bot.send_message(message.from_user.id, '📍 Выберите задание:', reply_markup=markup) #ответ бота
 
+    elif message.text == 'Задание №1':
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
+        back = types.KeyboardButton('↩️ Вернуться назад')
+        btn1 = types.KeyboardButton('📝 Перейти к заданиям')
+        btn2 = types.KeyboardButton('📺 Видео разбор')
+        bot.send_message(message.from_user.id, 'Задание №1. Сколько будет 2+2?' + '\n' + 'Ответ: ||4||', reply_markup=markup) #ответ бота
+        пере
+        
     elif message.text == '↩️ Вернуться назад':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
         btn1 = types.KeyboardButton('🌐 Наши ресурсы')
@@ -37,7 +45,7 @@ def get_text_messages(message):
         url_button2 = types.InlineKeyboardButton(text="Вконтакте", url="https://vk.com/sch2087")
         url_button3 = types.InlineKeyboardButton(text="Ученический кабинет", url="https://sites.google.com/mko2087.org/students")
         markup.add(url_button1, url_button2, url_button3)
-        bot.send_message(message.chat.id, '🌐 Наши ресурсы:', reply_markup=markup)
+        bot.send_message(message.chat.id, '🌐 Наши ресурсы 🌐', reply_markup=markup)
 
     elif message.text == 'Тест картинки':
         photo=open('logo1.png', 'rb')
