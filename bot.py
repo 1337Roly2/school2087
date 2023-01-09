@@ -5,11 +5,11 @@ bot = telebot.TeleBot('5780337764:AAFgXajoCzxXVtBqvBlCPz8HeQIz23hcVDM')
 
 @bot.message_handler(commands=['start'])
 def start(message):
-
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn1 = types.KeyboardButton("👋 Поздороваться")
-    markup.add(btn1)
-    bot.send_message(message.from_user.id, "👋 Привет! Я твой бот-помошник! 222", reply_markup=markup)
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
+        btn1 = types.KeyboardButton('Наши ресурсы')
+        btn2 = types.KeyboardButton('Тест картинки')
+        markup.add(btn1, btn2)
+        bot.send_message(message.from_user.id, '❓ Задайте интересующий вас вопрос', reply_markup=markup) #ответ бота
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
@@ -23,7 +23,7 @@ def get_text_messages(message):
         markup.add(btn1, btn2, btn3, btn4)
         bot.send_message(message.from_user.id, '❓ Задайте интересующий вас вопрос', reply_markup=markup) #ответ бота
 
-    elif message.text == 'Сайт школы':
+    elif message.text == 'Наши ресурсы':
         bot.send_message(message.from_user.id, 'Перейдите по ' + '[ссылке](https://sch2087uv.mskobr.ru/)', parse_mode='Markdown')
 
     elif message.text == 'Вконтакте школы':
