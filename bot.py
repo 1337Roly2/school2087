@@ -9,7 +9,7 @@ def start(message):
         btn1 = types.KeyboardButton('🌐 Наши ресурсы')
         btn2 = types.KeyboardButton('📝 Перейти к заданиям')
         markup.add(btn1, btn2)
-        bot.send_message(message.from_user.id, '❓ Задайте интересующий вас вопрос', reply_markup=markup) #ответ бота
+        bot.send_message(message.from_user.id, '✅ Выберите действие:', reply_markup=markup) #ответ бота
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
@@ -25,7 +25,11 @@ def get_text_messages(message):
         bot.send_message(message.from_user.id, '📍 Выберите задание:', reply_markup=markup) #ответ бота
 
     elif message.text == '↩️ Вернуться назад':
-        start()
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
+        btn1 = types.KeyboardButton('🌐 Наши ресурсы')
+        btn2 = types.KeyboardButton('📝 Перейти к заданиям')
+        markup.add(btn1, btn2)
+        bot.send_message(message.from_user.id, '✅ Выберите действие:', reply_markup=markup) #ответ бота
         
     elif message.text == '🌐 Наши ресурсы':
         markup = types.InlineKeyboardMarkup(row_width=1)
