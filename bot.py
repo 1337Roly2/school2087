@@ -30,7 +30,6 @@ def get_text_messages(message):
         btn1 = types.KeyboardButton('📝 Перейти к заданиям')
         btn2 = types.KeyboardButton('📺 Видео разбор')
         bot.send_message(message.from_user.id, 'Задание №1. Сколько будет 2+2?' + '\n' + 'Ответ: ||4||', reply_markup=markup) #ответ бота
-        пере
         
     elif message.text == '↩️ Вернуться назад':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
