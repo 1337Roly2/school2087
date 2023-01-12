@@ -16,28 +16,41 @@ def get_text_messages(message):
 
     if message.text == '📝 Перейти к заданиям':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
-        back = types.KeyboardButton('↩️ Вернуться назад')
-        btn1 = types.KeyboardButton('Задание №1')
-        btn2 = types.KeyboardButton('Задание №2')
-        btn3 = types.KeyboardButton('Задание №3')
-        btn4 = types.KeyboardButton('Задание №4')
-        markup.add(back, btn1, btn2, btn3, btn4)
-        bot.send_message(message.from_user.id, '📍 Выберите задание:', reply_markup=markup) #ответ бота
-
-    elif message.text == 'Задание №1':
+        back = types.KeyboardButton('❇️ Главное меню')
+        btn1 = types.KeyboardButton('📕 Вариант №1')
+        btn2 = types.KeyboardButton('📘 Вариант №2')
+        markup.add(back, btn1, btn2)
+        bot.send_message(message.from_user.id, '📍 Выберите вариант:', reply_markup=markup) #ответ бота
+    
+    # 1 ВАРИАНТ
+    # 1 задания
+    elif message.text == '📕 Вариант №1':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
-        back = types.KeyboardButton('↩️ Вернуться назад')
+        back = types.KeyboardButton('❇️ Главное меню')
         btn1 = types.KeyboardButton('📝 Перейти к заданиям')
+        btn2 = types.KeyboardButton('⏩ Следующее задание. В1-2')
+        markup.add(back, btn1, btn2)
+        markup2 = types.InlineKeyboardMarkup(row_width=1)
+        url_button1 = types.InlineKeyboardButton(text="📺 Видео разбор", url="https://www.youtube.com/watch?v=9H9xAK3Y25o")
+        markup2.add(url_button1)
+        bot.send_message(message.chat.id, 'Задание №1.' + '\n' + '\n' + 'В одной из кодировок Unicode каждый символ кодируется 16 битами. Вова написал текст (в нём нет лишних пробелов):' + '\n' + '\n' + '«Чиж, грач, стриж, гагара, пингвин, ласточка, жаворонок, свиристель, буревестник, вертиголовка — птицы».' + '\n' + '\n' + 'Ученик вычеркнул из списка название одной птицы. Заодно он вычеркнул ставшие лишними запятые и пробелы — два пробела не должны идти подряд. При этом размер нового предложения в данной кодировке оказался на 12 байт меньше, чем размер исходного предложения. Напишите в ответе вычеркнутое название птицы.' ,  reply_markup=markup) #ответ бота
+        bot.send_message(message.chat.id,  f'Ответ: ||Грач||', parse_mode='MarkdownV2',  reply_markup=markup2) #ответ бота
+        
+    elif message.text == '⏩ Следующее задание. В1-2':
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
+        back = types.KeyboardButton('❇️ Главное меню')
+        btn1 = types.KeyboardButton('📝 Перейти к заданиям')
+        btn2 = types.KeyboardButton('⏩ Следующее задание. В1-3')
         markup.add(back, btn1)
         markup2 = types.InlineKeyboardMarkup(row_width=1)
-        url_button1 = types.InlineKeyboardButton(text="📺 Видео разбор", url="https://youtu.be/Qc_bor8hnCQ")
+        url_button1 = types.InlineKeyboardButton(text="📺 Видео разбор", url="hhttps://www.youtube.com/watch?v=CEtG5MUmvWM")
         markup2.add(url_button1)
-        bot.send_message(message.chat.id, 'Задание №1.' + '\n' + '\n' + 'Сколько будет 1+1?',  reply_markup=markup) #ответ бота
-        bot.send_message(message.chat.id,  f'Ответ: ||2||', parse_mode='MarkdownV2',  reply_markup=markup2) #ответ бота
+        bot.send_photo(message.chat.id, 'https://github.com/1337Roly2/school2087/blob/main/pics/B1-2.png?raw=true')
+        bot.send_message(message.chat.id,  f'Ответ: ||5||', parse_mode='MarkdownV2',  reply_markup=markup2) #ответ бота
     
-    elif message.text == 'Задание №2':
+    elif message.text == '⏩ Следующее задание. В1-3':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
-        back = types.KeyboardButton('↩️ Вернуться назад')
+        back = types.KeyboardButton('❇️ Главное меню')
         btn1 = types.KeyboardButton('📝 Перейти к заданиям')
         markup.add(back, btn1)
         markup2 = types.InlineKeyboardMarkup(row_width=1)
@@ -48,7 +61,7 @@ def get_text_messages(message):
     
     elif message.text == 'Задание №3':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
-        back = types.KeyboardButton('↩️ Вернуться назад')
+        back = types.KeyboardButton('❇️ Главное меню')
         btn1 = types.KeyboardButton('📝 Перейти к заданиям')
         markup.add(back, btn1)
         markup2 = types.InlineKeyboardMarkup(row_width=1)
@@ -60,7 +73,7 @@ def get_text_messages(message):
     
     elif message.text == 'Задание №4':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
-        back = types.KeyboardButton('↩️ Вернуться назад')
+        back = types.KeyboardButton('❇️ Главное меню')
         btn1 = types.KeyboardButton('📝 Перейти к заданиям')
         markup.add(back, btn1)
         markup2 = types.InlineKeyboardMarkup(row_width=1)
@@ -69,7 +82,7 @@ def get_text_messages(message):
         bot.send_message(message.chat.id, 'Задание №1.' + '\n' + '\n' + 'Сколько будет 4+4?',  reply_markup=markup) #ответ бота
         bot.send_message(message.chat.id,  f'Ответ: ||8||', parse_mode='MarkdownV2',  reply_markup=markup2) #ответ бота
         
-    elif message.text == '↩️ Вернуться назад':
+    elif message.text == '❇️ Главное меню':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) #создание новых кнопок
         btn1 = types.KeyboardButton('🌐 Наши ресурсы')
         btn2 = types.KeyboardButton('📝 Перейти к заданиям')
