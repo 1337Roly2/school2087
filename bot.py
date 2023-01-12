@@ -85,7 +85,7 @@ def get_text_messages(message):
         bot.send_message(message.chat.id, '🌐 Наши ресурсы 🌐', reply_markup=markup)
 
     elif message.text == 'Тест картинки':
-        photo=open('logo1.png', 'rb')
+        photo=open(url='https://github.com/1337Roly2/school2087/blob/main/pics/logo1.png', 'rb')
         bot.send_photo(message.chat.id, photo)
 
 
