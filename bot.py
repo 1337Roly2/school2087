@@ -87,7 +87,7 @@ def get_text_messages(message):
     elif message.text == 'Тест картинки':
         #photo=open(url='https://github.com/1337Roly2/school2087/blob/main/pics/logo1.png', 'rb')
         #bot.send_photo(message.chat.id, photo)
-        bot.send_photo(chat_id, 'https://github.com/1337Roly2/school2087/blob/main/pics/logo1.png')
+        bot.send_photo(message.chat.id, 'https://github.com/1337Roly2/school2087/blob/main/pics/logo1.png')
 
 
 bot.polling(none_stop=True, interval=0) #обязательная для работы бота часть
