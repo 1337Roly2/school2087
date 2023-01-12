@@ -80,7 +80,7 @@ def get_text_messages(message):
         url_button1 = types.InlineKeyboardButton(text="📺 Видео-разбор", url="https://youtu.be/Ekrt54b_8as")
         markup2.add(url_button1)
         bot.send_message(message.chat.id, 'Задание №3.',  reply_markup=markup) 
-        bot.send_photo(message.chat.id, 'Напишите наибольшее целое число x, для которого истинно высказывание:' + '\n' + '\n' + '(X > 5) И НЕ (X > 15).')
+        bot.send_message(message.chat.id, 'Напишите наибольшее целое число x, для которого истинно высказывание:' + '\n' + '\n' + '(X > 5) И НЕ (X > 15).')
         bot.send_message(message.chat.id,  f'Ответ: ||15||', parse_mode='MarkdownV2',  reply_markup=markup2) 
 
     # 1 ВАРИАНТ. ЗАДАНИЕ №4
