@@ -43,7 +43,7 @@ def get_text_messages(message):
         btn2 = types.KeyboardButton('⏩ Следующее задание. В1-3')
         markup.add(back, btn1)
         markup2 = types.InlineKeyboardMarkup(row_width=1)
-        url_button1 = types.InlineKeyboardButton(text="📺 Видео разбор", url="hhttps://www.youtube.com/watch?v=CEtG5MUmvWM")
+        url_button1 = types.InlineKeyboardButton(text="📺 Видео разбор", url="https://www.youtube.com/watch?v=CEtG5MUmvWM")
         markup2.add(url_button1)
         bot.send_photo(message.chat.id, 'https://github.com/1337Roly2/school2087/blob/main/pics/B1-2.png?raw=true')
         bot.send_message(message.chat.id,  f'Ответ: ||5||', parse_mode='MarkdownV2',  reply_markup=markup2) #ответ бота
