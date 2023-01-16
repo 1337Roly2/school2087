@@ -91,7 +91,7 @@ def get_text_messages(message):
         btn2 = types.KeyboardButton('⏩ Следующее задание. В1-5')
         markup.add(back, btn1, btn2)
         markup2 = types.InlineKeyboardMarkup(row_width=1)
-        url_button1 = types.InlineKeyboardButton(text="📺 Видео-разбор", url="https://www.youtube.com/watch?v=Ekrt54b_8as")
+        url_button1 = types.InlineKeyboardButton(text="📺 Видео-разбор", url="https://www.youtube.com/watch?v=8lv-35Y1yQY")
         markup2.add(url_button1)
         bot.send_message(message.chat.id, 'Задание №4.',  reply_markup=markup)
         bot.send_photo(message.chat.id, 'https://github.com/1337Roly2/school2087/blob/main/pics/B1-4.png?raw=true')
