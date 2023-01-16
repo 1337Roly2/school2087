@@ -192,13 +192,15 @@ def get_text_messages(message):
         btn2 = types.KeyboardButton('⏩ Следующее задание. В1-12')
         markup.add(back, btn1, btn2)
         markup2 = types.InlineKeyboardMarkup(row_width=1)
+        markup3 = types.InlineKeyboardMarkup(row_width=1)
         url_button1 = types.InlineKeyboardButton(text="🗂️ Архив", url="https://drive.google.com/file/d/1J4iqJ2PLcNk4baYttwxLjtr9rowzIbxe/view?usp=share_link")
         url_button2 = types.InlineKeyboardButton(text="☁️ Облако", url="https://drive.google.com/drive/folders/1g3fTxVBxqUNJA4sXlwInyCsGoK1q4krf?usp=sharing")
         url_button3 = types.InlineKeyboardButton(text="📺 Видео-разбор", url="https://www.youtube.com/watch?v=7HfOEFw2K8g")
-        markup2.add(url_button1,url_button2,url_button3)
+        markup2.add(url_button1,url_button2)
+        markup3.add(url_button3)
         bot.send_message(message.chat.id, 'Задание №11.',  reply_markup=markup) 
-        bot.send_message(message.chat.id, 'В одном из произведений Н.В.Гоголя, текст которого приведён в подкаталоге "Гоголь" каталога "Проза", присутствует персонаж Остап. С помощью поисковых средвств операционной системы и текстового редактора выясните имя брата этого персонажа.')
-        bot.send_message(message.chat.id,  f'Ответ: ||Андрий||', parse_mode='MarkdownV2',  reply_markup=markup2) 
+        bot.send_message(message.chat.id, 'В одном из произведений Н.В.Гоголя, текст которого приведён в подкаталоге "Гоголь" каталога "Проза", присутствует персонаж Остап. С помощью поисковых средвств операционной системы и текстового редактора выясните имя брата этого персонажа.',  reply_markup=markup2)
+        bot.send_message(message.chat.id,  f'Ответ: ||Андрий||', parse_mode='MarkdownV2',  reply_markup=markup3) 
  
     # 1 ВАРИАНТ. ЗАДАНИЕ №12
     elif message.text == '⏩ Следующее задание. В1-12':
