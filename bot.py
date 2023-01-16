@@ -243,7 +243,7 @@ def get_text_messages(message):
         markup2.add(url_button1,url_button2,url_button3)
         bot.send_message(message.chat.id, 'Задание №14.',  reply_markup=markup) 
         bot.send_photo(message.chat.id, 'https://github.com/1337Roly2/school2087/blob/main/pics/B1-14.png?raw=true')
-        bot.send_message(message.chat.id,  f'Ответ: ||1) 21 ; 2) 52||', parse_mode='MarkdownV2',  reply_markup=markup2) 
+        bot.send_message(message.chat.id,  f'Ответ: ||1\) 21 ; 2\) 52||', parse_mode='MarkdownV2',  reply_markup=markup2) 
  
     # 1 ВАРИАНТ. ЗАДАНИЕ №15
     elif message.text == '⏩ Следующее задание. В1-15':
