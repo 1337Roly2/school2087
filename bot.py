@@ -174,7 +174,8 @@ def get_text_messages(message):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         back = types.KeyboardButton('❇️ Главное меню')
         btn1 = types.KeyboardButton('📝 Перейти к заданиям')
-        markup.add(back, btn1)
+        btn2 = types.KeyboardButton('⏩ Следующее задание. В1-11')
+        markup.add(back, btn1, btn2)
         markup2 = types.InlineKeyboardMarkup(row_width=1)
         url_button1 = types.InlineKeyboardButton(text="📺 Видео-разбор", url="https://www.youtube.com/watch?v=HNXq5tJS8Fg")
         markup2.add(url_button1)
@@ -182,5 +183,84 @@ def get_text_messages(message):
         bot.send_message(message.chat.id, 'Среди приведённых ниже трёх чисел, записанных в десятичной системе счисления, найдите число, сумма цифр которого в восьмеричной записи наименьшая. В ответе запишите сумму цифр в восьмеричной записи этого числа.')
         bot.send_photo(message.chat.id, 'https://github.com/1337Roly2/school2087/blob/main/pics/B1-10.png?raw=true')
         bot.send_message(message.chat.id,  f'Ответ: ||7||', parse_mode='MarkdownV2',  reply_markup=markup2) 
+ 
+    # 1 ВАРИАНТ. ЗАДАНИЕ №11
+    elif message.text == '⏩ Следующее задание. В1-11':
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        back = types.KeyboardButton('❇️ Главное меню')
+        btn1 = types.KeyboardButton('📝 Перейти к заданиям')
+        btn2 = types.KeyboardButton('⏩ Следующее задание. В1-12')
+        markup.add(back, btn1, btn2)
+        markup2 = types.InlineKeyboardMarkup(row_width=1)
+        url_button1 = types.InlineKeyboardButton(text="🗂️ Архив", url="https://drive.google.com/file/d/1J4iqJ2PLcNk4baYttwxLjtr9rowzIbxe/view?usp=share_link")
+        url_button2 = types.InlineKeyboardButton(text="☁️ Облако", url="https://drive.google.com/drive/folders/1g3fTxVBxqUNJA4sXlwInyCsGoK1q4krf?usp=sharing")
+        url_button3 = types.InlineKeyboardButton(text="📺 Видео-разбор", url="https://www.youtube.com/watch?v=7HfOEFw2K8g")
+        markup2.add(url_button1,url_button2,url_button3)
+        bot.send_message(message.chat.id, 'Задание №11.',  reply_markup=markup) 
+        bot.send_message(message.chat.id, 'В одном из произведений Н.В.Гоголя, текст которого приведён в подкаталоге "Гоголь" каталога "Проза", присутствует персонаж Остап. С помощью поисковых средвств операционной системы и текстового редактора выясните имя брата этого персонажа.')
+        bot.send_message(message.chat.id,  f'Ответ: ||Андрий||', parse_mode='MarkdownV2',  reply_markup=markup2) 
+ 
+    # 1 ВАРИАНТ. ЗАДАНИЕ №12
+    elif message.text == '⏩ Следующее задание. В1-12':
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        back = types.KeyboardButton('❇️ Главное меню')
+        btn1 = types.KeyboardButton('📝 Перейти к заданиям')
+        btn2 = types.KeyboardButton('⏩ Следующее задание. В1-13')
+        markup.add(back, btn1, btn2)
+        markup2 = types.InlineKeyboardMarkup(row_width=1)
+        url_button1 = types.InlineKeyboardButton(text="🗂️ Архив", url="https://drive.google.com/file/d/1pPIAZlVNlWnJh63jxOWIKdi5vTRkqLHq/view?usp=sharing")
+        url_button2 = types.InlineKeyboardButton(text="☁️ Облако", url="https://drive.google.com/drive/folders/1vHNtO1wMOyNsyzL_HWS7yL4B7JpFfkFU?usp=share_link")
+        url_button3 = types.InlineKeyboardButton(text="📺 Видео-разбор", url="https://www.youtube.com/watch?v=0DZw0af1cNE")
+        markup2.add(url_button1,url_button2,url_button3)
+        bot.send_message(message.chat.id, 'Задание №12.',  reply_markup=markup) 
+        bot.send_message(message.chat.id, 'Сколько файлов с расширением .rtf содержится в подкаталогах каталога Task12? В ответе укажите только число.')
+        bot.send_message(message.chat.id,  f'Ответ: ||10||', parse_mode='MarkdownV2',  reply_markup=markup2) 
+ 
+    # 1 ВАРИАНТ. ЗАДАНИЕ №13
+    elif message.text == '⏩ Следующее задание. В1-13':
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        back = types.KeyboardButton('❇️ Главное меню')
+        btn1 = types.KeyboardButton('📝 Перейти к заданиям')
+        btn2 = types.KeyboardButton('⏩ Следующее задание. В1-14')
+        markup.add(back, btn1, btn2)
+        markup2 = types.InlineKeyboardMarkup(row_width=1)
+        url_button1 = types.InlineKeyboardButton(text="📺 Видео-разбор", url="https://www.youtube.com/watch?v=z2vrViRw0iY")
+        markup2.add(url_button1)
+        bot.send_message(message.chat.id, 'Задание №13.',  reply_markup=markup) 
+        bot.send_photo(message.chat.id, 'https://github.com/1337Roly2/school2087/blob/main/pics/B1-13.png?raw=true',  reply_markup=markup2)
+ 
+    # 1 ВАРИАНТ. ЗАДАНИЕ №14
+    elif message.text == '⏩ Следующее задание. В1-14':
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        back = types.KeyboardButton('❇️ Главное меню')
+        btn1 = types.KeyboardButton('📝 Перейти к заданиям')
+        btn2 = types.KeyboardButton('⏩ Следующее задание. В1-15')
+        markup.add(back, btn1, btn2)
+        markup2 = types.InlineKeyboardMarkup(row_width=1)
+        url_button1 = types.InlineKeyboardButton(text="🗂️ Архив", url="https://drive.google.com/file/d/1D8YCYdhKQNd1UEZMBBMwA-V_6YM85R8T/view?usp=share_link")
+        url_button2 = types.InlineKeyboardButton(text="☁️ Облако", url="https://docs.google.com/spreadsheets/d/19TivcKih_GsWB0O_OCL0mViepi-ig6md/edit?usp=share_link&ouid=104878964026869489773&rtpof=true&sd=true")
+        url_button3 = types.InlineKeyboardButton(text="📺 Видео-разбор", url="https://www.youtube.com/watch?v=Oh3ijrnQ850")
+        markup2.add(url_button1,url_button2,url_button3)
+        bot.send_message(message.chat.id, 'Задание №14.',  reply_markup=markup) 
+        bot.send_photo(message.chat.id, 'https://github.com/1337Roly2/school2087/blob/main/pics/B1-14.png?raw=true')
+        bot.send_message(message.chat.id,  f'Ответ: ||1) 21 ; 2) 52||', parse_mode='MarkdownV2',  reply_markup=markup2) 
+ 
+    # 1 ВАРИАНТ. ЗАДАНИЕ №15
+    elif message.text == '⏩ Следующее задание. В1-15':
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        back = types.KeyboardButton('❇️ Главное меню')
+        btn1 = types.KeyboardButton('📝 Перейти к заданиям')
+        markup.add(back, btn1)
+        markup2 = types.InlineKeyboardMarkup(row_width=1)
+        url_button1 = types.InlineKeyboardButton(text="📺 Видео-разбор", url="https://www.youtube.com/watch?v=1y8sE9xGUNE")
+        markup2.add(url_button1)
+        bot.send_message(message.chat.id, 'Задание №15.',  reply_markup=markup) 
+        bot.send_message(message.chat.id, 'На бесконечном поле имеются две вертикальные стены и одна горизонтальная, соединяющая нижний конец левой и верхний конец правой вертикальных стен. Длины стен неизвестны. Робот находится в клетке, расположенной слева от нижнего края правой вертикальной стены, рядом со стеной. На рисунке указан один из возможных способов расположения стен и Робота (Робот обозначен буквой «Р»).')
+        bot.send_photo(message.chat.id, 'https://github.com/1337Roly2/school2087/blob/main/pics/B1-15-1.png?raw=true')
+        bot.send_message(message.chat.id, 'Напишите для Робота алгоритм, закрашивающий все клетки, примыкающие к вертикальным стенам справа. Робот должен закрасить только клетки, удовлетворяющие данному условию. Например, для приведённого выше рисунка Робот должен закрасить следующие клетки (см. рис.).')
+        bot.send_photo(message.chat.id, 'https://github.com/1337Roly2/school2087/blob/main/pics/B1-15-2.png?raw=true')
+        bot.send_message(message.chat.id, 'Конечное расположение Робота может быть произвольным. Алгоритм должен решать задачу для произвольного размера поля и любого допустимого расположения стен внутри прямоугольного поля. При исполнении алгоритма Робот не должен разрушиться, выполнение алгоритма должно завершиться. Алгоритм может быть выполнен в среде формального исполнителя или  записан в текстовом редакторе. Сохраните алгоритм в формате программы Кумир или в текстовом файле. Название файла и каталог для сохранения Вам сообщат организаторы экзамена.')
+        bot.send_message(message.chat.id,  f'Ответ: ||1) 21  
+                         ; 2) 52||', parse_mode='MarkdownV2',  reply_markup=markup2) 
 
 bot.polling(none_stop=True, interval=0)
