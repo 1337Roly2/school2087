@@ -287,7 +287,7 @@ def get_text_messages(message):
 bot.polling(none_stop=True, interval=0)
 
     # 2 ВАРИАНТ. ЗАДАНИЕ №2
-   elif message.text == '⏩ Следующее задание. В2-2':
+    elif message.text == '⏩ Следующее задание. В2-2':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True) 
         back = types.KeyboardButton('❇️ Главное меню')
         btn1 = types.KeyboardButton('📝 Перейти к заданиям')
