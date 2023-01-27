@@ -283,8 +283,7 @@ def get_text_messages(message):
         markup2.add(url_button1)
         bot.send_message(message.chat.id, 'Задание №1.',  reply_markup=markup) 
         bot.send_message(message.chat.id, 'В одной из кодировок Unicode каждый символ кодируется 16 битами. Вова написал текст (в нём нет лишних пробелов):' + '\n' + '\n' + '«Ёж, лев, слон, олень, тюлень, носорог, крокодил, аллигатор – дикие животные».' + '\n' + '\n' + 'Ученик вычеркнул из списка название одной птицы. Заодно он вычеркнул ставшие лишними запятые и пробелы — два пробела не должны идти подряд. При этом размер нового предложения в данной кодировке оказался на 12 байт меньше, чем размер исходного предложения. Напишите в ответе вычеркнутое название птицы.') 
-        bot.send_message(message.chat.id,  f'Ответ: ||Слон||', parse_mode='MarkdownV2',  reply_markup=markup2) 
-bot.polling(none_stop=True, interval=0)
+        bot.send_message(message.chat.id,  f'Ответ: ||Слон||', parse_mode='MarkdownV2',  reply_markup=markup2)
 
     # 2 ВАРИАНТ. ЗАДАНИЕ №2
     elif message.text == '⏩ Следующее задание. В2-2':
@@ -566,3 +565,5 @@ begin\n
   else writeln('NO');\n
 end.||', parse_mode='MarkdownV2',  reply_markup=markup2) 
 
+ 
+bot.polling(none_stop=True, interval=0)
