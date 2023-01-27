@@ -497,7 +497,7 @@ def get_text_messages(message):
         bot.send_message(message.chat.id, 'В электронную таблицу занесли данные о тестировании учеников по выбранным ими предметам. В столбце A записан код округа, в котором учится ученик; в столбце B – фамилия; в столбце C – выбранный учеником предмет; в столбце D – тестовый балл. Всего в электронную таблицу были занесены данные 1000 учеников.') 
         bot.send_photo(message.chat.id, 'https://github.com/1337Roly2/school2087/blob/main/pics/B2-14.png?raw=true')
         bot.send_message(message.chat.id, 'На основании данных, содержащихся в этой таблице, выполните задания.'  + '\n' + '1. Определите, сколько учеников, которые проходили тестирование по физкультура, набрали более 200 баллов. Ответ запишите в ячейку H2 таблицы.'  + '\n' + '2. Найдите средний тестовый балл учеников, которые проходили тестирование по физкультуре. Ответ запишите в ячейку H3 таблицы с точностью не менее двух знаков после запятой.'  + '\n' + '3. Постройте круговую диаграмму, отображающую соотношение числа участников из округов с кодами «C», «ЮЗ» и «З». Левый верхний угол диаграммы разместите вблизи ячейки G6.',  reply_markup=markup2) 
-        bot.send_message(message.chat.id,  f'Ответ:\n||1\) 172 \n 2\) 458,03 \n 3\) C\-66; ЮЗ\-223; З\-108||', parse_mode='MarkdownV2',  reply_markup=markup3) 
+        bot.send_message(message.chat.id,  f'Ответ:\n||1\) 172 \n2\) 458,03 \n3\) C\-66; ЮЗ\-223; З\-108||', parse_mode='MarkdownV2',  reply_markup=markup3) 
  
     # 2 ВАРИАНТ. ЗАДАНИЕ №15-1
     elif message.text == '⏩ Следующее задание. В2-15-1':
@@ -527,6 +527,6 @@ def get_text_messages(message):
         bot.send_message(message.chat.id, 'Задание №15-2.',  reply_markup=markup) 
         bot.send_message(message.chat.id, 'Напишите программу, которая в последовательности натуральных чисел находит среднее арифметическое чисел, кратных 8, или сообщает, что таких чисел нет (выводит «NO»). Программа получает на вход натуральные числа, количество введённых чисел неизвестно, последовательность чисел заканчивается числом 0 (0 – признак окончания ввода, не входит в последовательность). Количество чисел не превышает 100. Введённые числа не превышают 300. Программа должна вывести среднее арифметическое чисел, кратных 8, или вывести «NO», если таких чисел нет. Значение выводить с точностью до десятых.' + '\n' + 'Пример работы программы:')
         bot.send_photo(message.chat.id, 'https://github.com/1337Roly2/school2087/blob/main/pics/B1-15-2.png?raw=true')
-        bot.send_message(message.chat.id,  f'Ответ:\n||var a, s, n: integer;\nbegin\n  s:\=0; n:\=0;\n  readln\(a\);\n  while a<>0 do begin\n    if \(a mod 8 \= 0\) then begin\n      s :\= s + a;\n      n :\= n + 1;\n    end;\n    readln\(a\); \n  end;\n  if n > 0 then \n       writeln\(s/n :5:1\)\n  else writeln\(\'NO\'\);\nend.||', parse_mode='MarkdownV2',  reply_markup=markup2) 
+        bot.send_message(message.chat.id,  f'Ответ:\n||var a, s, n: integer;\nbegin\n  s:\=0; n:\=0;\n  readln\(a\);\n  while a\<\>0 do begin\n    if \(a mod 8 \= 0\) then begin\n      s :\= s + a;\n      n :\= n + 1;\n    end;\n    readln\(a\); \n  end;\n  if n \> 0 then \n       writeln\(s/n :5:1\)\n  else writeln\(\'NO\'\);\nend.||', parse_mode='MarkdownV2',  reply_markup=markup2) 
  
 bot.polling(none_stop=True, interval=0)
