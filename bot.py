@@ -272,7 +272,7 @@ def get_text_messages(message):
 
     # 2 ВАРИАНТ
     # 2 ВАРИАНТ. ЗАДАНИЕ №1
-    elif message.text == '📕 Вариант №2':
+    elif message.text == '📘 Вариант №2':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         back = types.KeyboardButton('❇️ Главное меню')
         btn1 = types.KeyboardButton('📝 Перейти к заданиям')
