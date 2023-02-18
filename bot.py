@@ -608,7 +608,7 @@ def get_text_messages(message):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         back = types.KeyboardButton('❇️ Главное меню')
         btn1 = types.KeyboardButton('📝 Перейти к заданиям')
-        btn2 = types.KeyboardButton('⏩ Следующее задание. В3-4
+        btn2 = types.KeyboardButton('⏩ Следующее задание. В3-4')
         markup.add(btn1, btn2)
         markup.row(back)
         markup2 = types.InlineKeyboardMarkup(row_width=1)
