@@ -38,7 +38,8 @@ def get_text_messages(message):
         btn1 = types.KeyboardButton('📕 Вариант №1')
         btn2 = types.KeyboardButton('📘 Вариант №2')
         btn3 = types.KeyboardButton('📙 Вариант №3')
-        markup.add(back, btn1, btn2, btn3)
+        markup.add(btn1, btn2, btn3)
+        markup.row(back)
         bot.send_message(message.from_user.id, '📍 Выберите вариант:', reply_markup=markup) 
     
     # 1 ВАРИАНТ
